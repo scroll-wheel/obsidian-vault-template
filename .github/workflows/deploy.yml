@@ -23,7 +23,7 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for git info
           path: vault/
-      - name: Checkout Quartz v5.0.0
+      - name: Checkout Quartz
         uses: actions/checkout@v4
         with:
           repository: jackyzha0/quartz
