@@ -28,7 +28,7 @@ jobs:
         with:
           repository: jackyzha0/quartz
           path: quartz/
-          ref: v5.0.0
+          # ref: v5.0.0
       - name: Move configuration to Quartz
         run: mv vault/quartz.config.yaml quartz/
       - name: Update baseUrl in configuration
@@ -43,7 +43,7 @@ jobs:
         run: npm ci
         working-directory: quartz/
       - name: Install plugins
-        run: npx quartz plugin install
+        run: npx quartz plugin install # --from-config
         working-directory: quartz/
       - name: Build site
         run: npx quartz build --directory ../vault/
