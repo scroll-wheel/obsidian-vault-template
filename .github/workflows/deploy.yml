@@ -43,7 +43,7 @@ jobs:
         run: npm ci
         working-directory: quartz/
       - name: Install plugins
-        run: npx quartz plugin resolve
+        run: npx quartz plugin install
         working-directory: quartz/
       - name: Build site
         run: npx quartz build --directory ../vault/
