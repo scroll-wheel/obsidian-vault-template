@@ -31,7 +31,7 @@ jobs:
       - name: Move configuration to Quartz
         run: mv vault/quartz.config.yaml quartz/
       - name: Update baseUrl in configuration
-        run: sed --in-place 's/baseUrl:.*/baseUrl: ${{ github.repository_owner }}.github.io\/${{ github.event.repository.name }}/'
+        run: sed --in-place "s/baseUrl:.*/baseUrl: ${{ github.repository_owner }}.github.io\/${{ github.event.repository.name }}/"
       - name: Remove license
         run: rm vault/LICENSE
       - uses: actions/setup-node@v4
